@@ -5,7 +5,6 @@ const {User}=require('../../models')
 require('dotenv').config({path:'../../../.env'});
 
 const sendgrid = require('@sendgrid/mail');
-//const SENDGRID_API_KEY = "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"
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
 
 const sendMailForPasswordReset = () => async (req, res, next) => {
